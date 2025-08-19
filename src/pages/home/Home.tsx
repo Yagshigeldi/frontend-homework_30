@@ -5,7 +5,7 @@ import type { RootState } from '../../lib';
 import { useNavigate } from 'react-router-dom';
 import { udpatingValues } from '../../lib/features/userControl';
 import type { IFormData } from '../../types';
-import { SquarePen, Trash } from 'lucide-react';
+import { Pencil, Trash2 } from 'lucide-react';
 
 const Home = () => {
   const {deleteUser, getUsers} = useUser()
@@ -52,8 +52,8 @@ const Home = () => {
             <td className="py-4">{user.password}</td>
             <td className="py-4">{user.phoneNumber}</td>
             <td className="py-4">{user.gender}</td>
-            <td className="py-4"><button onClick={() => handleUpdate(user)}><SquarePen/></button></td>
-            <td className="py-4"><button onClick={() => handleDelete(user.id || '')}><Trash/></button></td>
+            <td className="py-4"><button onClick={() => handleUpdate(user)}><Pencil /></button></td>
+            <td className="py-4"><button onClick={() => handleDelete(user.id || '')}><Trash2 /></button></td>
           </tr>
             ))}
         </tbody>
